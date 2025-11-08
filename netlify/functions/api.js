@@ -24,8 +24,8 @@ exports.handler = async (event, context) => {
 
       // Load data for current sheet
       const api = `https://opensheet.elk.sh/1x_BUYpryHseve8-NFiby2ZyVnlWYjcn9-0oPIYhQbPM/${currentSheet.id}`
-      const data = await fetch(api)
-
+      const response = await fetch(api)
+      const data = await response.json()
 
       // Return the data as the response
       return {

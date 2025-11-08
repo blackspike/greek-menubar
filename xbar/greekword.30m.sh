@@ -3,7 +3,7 @@
 # <xbar.title>Greek Word of the Day</xbar.title>
 # <xbar.version>v1.0</xbar.version>
 # <xbar.author>Your Name</xbar.author>
-# <xbar.author.github>yourusername</xbar.author.github>
+# <xbar.author.github>blackspike</xbar.author.github>
 # <xbar.desc>Displays a Greek word with English translation and pronunciation</xbar.desc>
 # <xbar.dependencies>curl,jq</xbar.dependencies>
 

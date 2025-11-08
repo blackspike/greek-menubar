@@ -26,12 +26,13 @@ exports.handler = async (event, context) => {
       const api = `https://opensheet.elk.sh/1x_BUYpryHseve8-NFiby2ZyVnlWYjcn9-0oPIYhQbPM/${currentSheet.id}`
       const response = await fetch(api)
       const data = await response.json()
+      const randomItem = data[Math.floor(Math.random() * data.length)]
 
       // Return the data as the response
       return {
         statusCode: 200,
         headers,
-        body: JSON.stringify(data),
+        body: JSON.stringify(randomItem),
       }
     } catch (error) {
       // Return an error response if there was an issue processing the request

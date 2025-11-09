@@ -1,23 +1,20 @@
 exports.handler = async (event, context) => {
-
-
   const sheets = [
     { id: 'basics', name: 'Basics' },
     { id: 'iota', name: 'Iota' },
     { id: 'verbs', name: 'Verbs' },
     { id: 'pronouns', name: 'Pronouns' },
-    { id: 'numbers', name: 'Numbers' }
+    { id: 'numbers', name: 'Numbers' },
   ]
-
 
   // Set headers to enable CORS
   const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers": "Content-Type",
-    "Access-Control-Allow-Methods": "GET, POST",
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, POST',
   }
 
-  if (event.httpMethod === "GET") {
+  if (event.httpMethod === 'GET') {
     try {
       // Process the GET request as needed
       const currentSheet = sheets[0]
@@ -39,16 +36,15 @@ exports.handler = async (event, context) => {
       return {
         statusCode: 500,
         headers,
-        body: JSON.stringify({ error: "Failed to process GET request" }),
+        body: JSON.stringify({ error: 'Failed to process GET request' }),
       }
     }
-  }
-   else {
+  } else {
     // Handle other HTTP methods (e.g., PUT, DELETE) if needed
     return {
       statusCode: 405,
       headers,
-      body: JSON.stringify({ error: "Method not allowed" }),
+      body: JSON.stringify({ error: 'Method not allowed' }),
     }
   }
 }

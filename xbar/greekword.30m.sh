@@ -28,19 +28,19 @@ examples=$(echo "$response" | jq -r '.Examples // empty')
 # Display Greek word as title
 echo "$greek"
 echo "---"
-echo "English: $english | refresh=true"
+echo "$english | refresh=true"
 
 # Only show pronunciation if it exists
 if [ -n "$pronunciation" ]; then
-    echo "Pronunciation: $pronunciation | refresh=true"
+    echo "$pronunciation | refresh=true"
 fi
 
 # Only show description if it exists
 if [ -n "$description" ]; then
-    echo "Description: $description | refresh=true"
+    echo "$description | refresh=true"
 fi
 
 # Only show examples if they exist
 if [ -n "$examples" ]; then
-    echo "Examples: $examples | refresh=true"
+    echo "$examples | refresh=true"
 fi

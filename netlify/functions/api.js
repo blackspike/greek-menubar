@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
       const currentSheet = sheets[0]
 
       // Load data for current sheet
-      const api = `https://opensheet.elk.sh/1FfBYLwdmtQZXOAJcinkeFr6Ja2VGlJN9q9neupggMFk/Verbs/${currentSheet.id}`
+      const api = `https://opensheet.elk.sh/1FfBYLwdmtQZXOAJcinkeFr6Ja2VGlJN9q9neupggMFk/${currentSheet.id}`
       const response = await fetch(api)
       const data = await response.json()
       const randomItem = data[Math.floor(Math.random() * data.length)]

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # <xbar.title>Greek Word of the Day</xbar.title>
-# <xbar.version>v1.0</xbar.version>
+# <xbar.version>v1.1</xbar.version>
 # <xbar.author>Your Name</xbar.author>
 # <xbar.author.github>blackspike</xbar.author.github>
 # <xbar.desc>Displays a Greek word with English translation and pronunciation</xbar.desc>
